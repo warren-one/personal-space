@@ -1,9 +1,11 @@
 package com.warren.space.mapper;
 
 import com.warren.space.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 

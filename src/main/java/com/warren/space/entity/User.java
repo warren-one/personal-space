@@ -2,19 +2,29 @@ package com.warren.space.entity;
 
 import lombok.Data;
 import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
- * @Description: 用户公共实体类
+ * @Description: 用户公共实体类  jpa
  * @ClassName User
  * @Author hzh
  * @Date 2018/7/26
  */
 @Data
 @Log4j
+@Entity
 public class User {
 
     //用户id
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     //登录账号
     private String loginCode;
@@ -26,13 +36,13 @@ public class User {
     private String email;
 
     //手机号
-    private int phone;
+    private Long phone;
 
     //年龄
-    private int age;
+    private Integer age;
 
     //性别
-    private int sex;
+    private Integer sex;
 
     //密码
     private String password;
@@ -44,83 +54,4 @@ public class User {
     private Boolean isLogout;
 
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getLoginCode() {
-        return loginCode;
-    }
-
-    public void setLoginCode(String loginCode) {
-        this.loginCode = loginCode;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-    public void setPhone(int phone) {
-        this.phone = phone;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getSex() {
-        return sex;
-    }
-
-    public void setSex(int sex) {
-        this.sex = sex;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Boolean getLogout() {
-        return isLogout;
-    }
-
-    public void setLogout(Boolean logout) {
-        isLogout = logout;
-    }
 }

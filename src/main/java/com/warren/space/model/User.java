@@ -2,9 +2,10 @@ package com.warren.space.model;
 
 import lombok.Data;
 import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 
 /**
- * @Description: 用户公共实体类
+ * @Description: 用户公共实体类  mybatis
  * @ClassName User
  * @Author hzh
  * @Date 2018/7/26
