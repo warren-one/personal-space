@@ -1,8 +1,8 @@
 package com.warren.space.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.warren.space.mapper.UserMapper;
-import com.warren.space.model.User;
+import com.warren.space.mapper.user.UserMapper;
+import com.warren.space.model.user.User;
 import com.warren.space.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl implements UserService{
 
-    @Autowired
+    @Autowired(required = false)
     private UserMapper userMapper;
 
 
@@ -37,6 +37,6 @@ public class UserServiceImpl implements UserService{
         int  number = Integer.valueOf(pageNum);*/
         //将参数传给这个方法就可以实现物理分页了
         PageHelper.startPage(1,2);
-        return userMapper.selectAllUser();
+        return userMapper.selectAll();
     }
 }

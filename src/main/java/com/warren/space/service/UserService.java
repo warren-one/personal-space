@@ -1,11 +1,12 @@
 package com.warren.space.service;
 
-import com.warren.space.model.User;
+
+import com.warren.space.model.user.User;
 
 import java.util.List;
 
 /**
- * @Description: TODO
+ * @Description:
  * @ClassName UserService
  * @Author hzh
  * @Date 2018/7/26
